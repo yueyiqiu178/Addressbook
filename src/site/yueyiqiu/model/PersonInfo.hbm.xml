@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping>
+
+	<class name="site.yueyiqiu.model.PersonInfo" table="tb_personinfo">
+	
+		<id name="pId" type="java.lang.Integer">
+			<column name="pid"></column>
+			<generator class="increment"></generator>
+		</id>
+		
+	<property name="pName" type="string">
+		<column name="pname" length="45"></column>
+	</property>
+	
+	<property name="pSex" type="string">
+		<column name="psex" length="5"></column>
+	</property>
+	
+	<property name="pAge" type="int">
+		<column name="page"></column>
+	</property>
+	
+	<property name="pMobile" type="string">
+		<column name="pmobile" length="45"></column>
+	</property>
+	
+	<property name="pAddress" type="string">
+		<column name="paddress" length="45"></column>
+	</property>
+	
+	<property name="pEmail" type="string">
+		<column name="pemail" length="45"></column>
+	</property>
+	
+	<many-to-one name="user" class="site.yueyiqiu.model.User" not-null="true" column="user_id" lazy="false">
+	
+	</many-to-one>
+	
+	<many-to-one name="type" class="site.yueyiqiu.model.PersonType" not-null="true" column="typeid" lazy="false">
+	
+	</many-to-one>
+	
+	</class>
+
+</hibernate-mapping>

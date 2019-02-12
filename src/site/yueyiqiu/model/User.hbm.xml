@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping>
+
+	<class name="site.yueyiqiu.model.User" table="tb_user">
+	
+		<id name="userId" type="java.lang.String">
+			<column name="user_id"></column>
+			
+		</id>
+		
+		<property name="userPwd" type="string" >
+			<column name="user_pwd" length="45"></column>
+		</property>
+		
+		<property name="userName" type="string" >
+			<column name="user_name" length="45"></column>
+		</property>
+		
+		<property name="userAge" type="int" >
+			<column name="user_age"></column>
+		</property>
+		
+		<property name="userSex" type="string" >
+			<column name="user_sex" length="5"></column>
+		</property>
+		
+		<property name="userLogintime" type="calendar" >
+			<column name="user_createtime" length="45"></column>
+		</property>
+		
+	
+	
+	
+	</class>
+
+</hibernate-mapping>
